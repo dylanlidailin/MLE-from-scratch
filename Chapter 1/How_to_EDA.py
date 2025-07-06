@@ -9,15 +9,14 @@ def sum_list(x):
 import numpy as np
 import pandas as pd
 
-#%%
-#function that computes the range of a variable and then, for no good reason, adds 100 and divides by 10.
-def range_plus_100_div_10(x):
-    return (max(x)-min(x)+100)/10
 
 # %%
-#create a list of numbers and then call the function on that list
-x = [1,2,3,4,5,6,7,8,9,10]
-range_plus_100_div_10(x)
+admit_2 = pd.read_csv("../data/LogReg.csv")
+print(admit_2.info())
 
 # %%
+# How to use 'rank'
+admit_2['rank'] = admit_2['rank'].astype("category")   # here, we assign the newly-assigned vars
+print(admit_2.info())
 
+# %%
